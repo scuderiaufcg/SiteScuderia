@@ -1,14 +1,23 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+
 function App() {
-return (
-    <div className="App font-sans text-center p-8">
-      <h1 className="text-4xl text-primary mb-4">Scuderia UFCG</h1>
-      <p className="text-lg max-w-xl mx-auto mb-6">
-        Somos a equipe de Fórmula SAE da Universidade Federal de Campina Grande. Construímos, testamos e competimos com nossos próprios carros de alto desempenho.
-      </p>
-      <button className="px-6 py-3 bg-red-700 text-white rounded-lg text-base cursor-pointer hover:bg-red-800 transition">
-        Saiba mais
-      </button>
-    </div>
+  return (
+    <BrowserRouter>
+      <div className="flex flex-col min-h-screen font-sans">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
