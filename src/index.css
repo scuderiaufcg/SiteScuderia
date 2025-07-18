@@ -1,16 +1,34 @@
 @import "tailwindcss";
 
-/* Testes */
-:root { 
-  --color-primary: #2563eb;
-}
-
-.bg-primary {
-  background-color: var(--color-primary);
-}
-
 .vertical-timeline-element-date {
   color: #fff !important;
   font-size: 1.1rem !important;
   font-weight: 700 !important;
+}
+
+.font-oswald {
+  font-family: oswald;
+}
+
+.font-tiktok {
+  font-family: Tiktoksans;
+}
+
+.font-merri {
+  font-family: Tiktoksans;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('./fonts/Oswald.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Tiktoksans';
+  src: url('./fonts/TikTokSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Merri';
+  src: url('./fonts/Merriweather.ttf') format('truetype');
 }

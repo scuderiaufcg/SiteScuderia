@@ -87,7 +87,7 @@ export default function Header() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-center items-center">
-        <nav className="space-x-6 flex flex-wrap justify-center">
+        <nav className="font-tiktok space-x-6 flex flex-wrap justify-center">
           {navItem("inicio", "Início")}
           {navItem("sobre", "Sobre")}
           {navItem("projeto", "Projeto")}
