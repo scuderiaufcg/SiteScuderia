@@ -2,7 +2,7 @@
 
 .vertical-timeline-element-date {
   color: #fff !important;
-  top: 0px;
+  top: 0px !important;
   font-size: 1.1rem !important;
   font-weight: 700 !important;
 }
