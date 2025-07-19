@@ -1,6 +1,7 @@
 import Carousel from '../components/Carousel';
 import Timeline from '../components/Timeline';
 import Sponsors from '../components/Sponsors'
+import OurCar from '../components/OurCar'
 
 const images = [
   '/2015.jpg',
@@ -49,15 +50,14 @@ export default function Home() {
         <br />
       </div>
 
-      <section id="projeto" className="w-full py-16 bg-[#224985]">
+      <section id="projeto" className="w-full py-16  bg-[#224985]">
         <h2 className="text-3xl font-semibold text-center mb-8 text-white">Projeto</h2>
         <Timeline />
       </section>
 
-      <div className="py-16 space-y-32">
+      <div className="py-8 space-y-32">
         <section id="carro" className="scroll-mt-24 min-h-[80vh]">
-          <h2 className="text-3xl font-semibold">Nosso Carro</h2>
-          <p>Descrição do carro, especificações técnicas...</p>
+          <OurCar/>
         </section>
 
         <section id="patrocinios" className="scroll-mt-24 min-h-[80vh]">
