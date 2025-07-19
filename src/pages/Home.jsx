@@ -49,7 +49,7 @@ export default function Home() {
         <br />
       </div>
 
-      <section id="projeto" className="w-full py-16" style={{ backgroundColor: 'rgb(34,73,133)' }}>
+      <section id="projeto" className="w-full py-16 bg-[#224985]">
         <h2 className="text-3xl font-semibold text-center mb-8 text-white">Projeto</h2>
         <Timeline />
       </section>
