@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const historicoCarros = [
   {
     ano: 2017,
-    imagens: ["/2017/1.jpg", "/2017/2.jpg", "/2017/3.jpg","/2017/4.jpg"],
+    imagens: ["/2017/1.jpg", "/2017/2.jpg", "/2017/3.jpg", "/2017/4.jpg"],
     texto:
       "Em 2017, demos os primeiros passos com um carro simples, utilizando o motor Falcon 400, com 28,7 cv de potência e estrutura em aço 1020. Era o começo da jornada, sem dados registrados sobre peso ou centro de gravidade, mas com muita vontade de aprender.",
     dados: [
@@ -19,7 +19,7 @@ const historicoCarros = [
   },
   {
     ano: 2018,
-    imagens: ["/2018/1.JPG", "/2017/2.JPG", "/2018/3.jpeg"],
+    imagens: ["/2018/1.JPG", "/2018/2.JPG", "/2018/3.jpeg"],
     texto:
       "No ano de 2018, o projeto foi significativamente aprimorado. Trocamos o motor para um Yamaha XT 660R, quase dobrando a potência para 48 cv. Adicionamos novas medições como massa total de 285 kg e centro de gravidade a 255 mm, mantendo o entre eixos e o material do chassi. O desempenho e o controle do carro foram claramente aprimorados.",
     dados: [
