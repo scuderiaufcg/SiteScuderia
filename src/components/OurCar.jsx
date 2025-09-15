@@ -35,7 +35,7 @@ const historicoCarros = [
   },
   {
     ano: 2019,
-    imagens: ["/2018/1.JPG", "/2017/2.JPG", "/2018/3.jpeg"],
+    imagens: ["/2018/1.JPG", "/2018/2.JPG", "/2018/3.jpeg"],
     texto:
       "Em 2019, mantivemos o conjunto mecânico, mas refinamos o projeto: o carro ficou um pouco mais pesado (287 kg), mas com ajustes finos e melhoria aerodinâmica. Foi o ano de consolidação técnica e amadurecimento do projeto.",
     dados: [

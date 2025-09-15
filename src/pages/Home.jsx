@@ -66,18 +66,18 @@ export default function Home() {
           <OurCar />
         </section>
 
-        <section id="patrocinios" className="scroll-mt-24 min-h-[80vh]">
-          <h2 className="font-merri text-5xl text-center mb-8 text-black">
-            Patrocinadores
-          </h2>
-          <Sponsors />
-        </section>
-
         <section id="subsistemas" className="bg-[#224985] py-24">
           <div className="max-w-7xl mx-auto px-4 text-center text-white">
             <h2 className="text-4xl font-bold mb-10">Subsistemas</h2>
           </div>
           <SubsistemasSlider />
+        </section>
+
+        <section id="patrocinios" className="scroll-mt-24 min-h-[80vh]">
+          <h2 className="font-merri text-5xl text-center mb-8 text-black">
+            Patrocinadores
+          </h2>
+          <Sponsors />
         </section>
       </div>
     </main>
