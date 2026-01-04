@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-const sections = ["inicio", "sobre", "projeto", "carro", "patrocinios", "subsistemas"];
+const sections = ["inicio", "sobre", "projeto", "carro", "patrocinios", "patrocinios"];
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("inicio");
@@ -92,8 +92,8 @@ export default function Header() {
           {navItem("sobre", "Sobre")}
           {navItem("projeto", "Projeto")}
           {navItem("carro", "Nosso Carro")}
-          {navItem("patrocinios", "Patrocínio")}
           {navItem("subsistemas", "Subsistemas")}
+          {navItem("patrocinios", "Patrocínio")}
         </nav>
       </div>
     </header>

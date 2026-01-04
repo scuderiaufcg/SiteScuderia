@@ -58,6 +58,7 @@ export default function Home() {
 
       <section id="projeto" className="w-full py-16  bg-[#224985]">
         <h2 className="text-3xl font-semibold text-center mb-8 text-white">
+          <div className="pt-5"></div>
           Projeto
         </h2>
         <Timeline />
@@ -68,7 +69,7 @@ export default function Home() {
           <OurCar />
         </section>
 
-        <section id="subsistemas" className="bg-[#224985] py-24">
+        <section id="subsistemas" className="w-full bg-[#224985] min-h-screen pt-[66px] flex flex-col items-center justify-center">
           <div className="max-w-7xl mx-auto px-4 text-center text-white">
             <h2 className="text-4xl font-bold mb-10">Subsistemas</h2>
           </div>

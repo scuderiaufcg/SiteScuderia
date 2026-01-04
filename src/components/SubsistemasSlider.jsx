@@ -4,64 +4,119 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const subsistemas = [
   {
-    nome: "Aerodinâmica",
-    descricao:
-      "O subsistema de aerodinâmica é responsável por desenvolver todo o kit aerodinâmico do carro, que são as partes instaladas no carro com a finalidade de evitar a perda de aderências dos pneus com a pista, além disto, ajudando assim, o carro a grudar no chão e realizar curvas com velocidades maiores.",
-    imagem: "/subsistemas/aerodinamica.png",
+    nome: "Coordenação Acadêmica",
+    imagem: "/subsistemas/subsistemas2/coordenacao-academica.jpg",
+    cargos: [
+      {
+        titulo: "Professor(a) Coordenador(a) do Projeto",
+        descricao:
+          "Acompanha pedagogicamente e institucionalmente o projeto, assegura aderência às normas da universidade, valida conformidade acadêmica das entregas, apoia formalizações e captação de recursos e responde pelos prazos acadêmicos relacionados a pareceres, formalizações e relatórios.",
+      },
+    ],
   },
   {
-    nome: "Chassi",
-    descricao:
-      'Fornece a estrutura "esquelética" do veículo, sendo o principal meio de garantir a segurança do piloto. É a estrutura a qual os outros subsistemas são interligados. Para se garantir a performance do carro, deve ser suficientemente rígido, forte, leve e também ergonômico.',
-    imagem: "/subsistemas/chassi.avif",
+    nome: "Liderança Operacional",
+    imagem: "/subsistemas/subsistemas2/liderança-operacional.jpg",
+    cargos: [
+      {
+        titulo: "Capitão(ã) do Projeto",
+        descricao:
+          "Coordena as diretorias Administrativa, Técnica e de Fabricação, define objetivos e marcos estratégicos em conjunto com os diretores, representa a equipe em reuniões institucionais e com patrocinadores, media conflitos de prioridade entre projeto técnico e execução de fabricação, supervisiona documentos obrigatórios da competição e responde pelos prazos globais do projeto.",
+      },
+    ],
   },
   {
-    nome: "Elétrica",
-    descricao:
-      "Elétrica é responsável por todo o chicote elétrico do veículo envolvendo também a parte de validação de alguns dados de outros subsistemas, como por exemplo, suspensão. Essa validação se dá por meio da instalação de sensores no carro os quais irão colher informações que serão armazenadas para se ter uma maior exatidão na hora de tirar o projeto do papel.",
-    imagem: "/subsistemas/eletrica.jpg",
+    nome: "Diretoria Administrativa",
+    imagem: "/subsistemas/subsistemas2/diretoria-administrativa.jpg",
+    cargos: [
+      {
+        titulo: "Diretor(a) Administrativo(a)",
+        descricao:
+          "Estrutura o suporte organizacional do projeto, coordena processos administrativos, materiais institucionais, parcerias e responde pelos prazos administrativos.",
+      },
+      {
+        titulo: "Gerente de Gestão de Pessoas e Desenvolvimento",
+        descricao:
+          "Conduz recrutamento, integração, capacitação dos membros, treinamentos e acompanhamento de desempenho.",
+      },
+      {
+        titulo: "Gerente de Comunicação e Relações Institucionais",
+        descricao:
+          "Gerencia identidade visual, presença digital, materiais gráficos e relacionamento com patrocinadores.",
+      },
+      {
+        titulo: "Gerente Financeiro e Prestação de Contas",
+        descricao:
+          "Planeja e controla orçamento, fluxo de caixa e elabora prestações de contas.",
+      },
+    ],
   },
   {
-    nome: "Freios",
-    descricao:
-      "O sistema de freio é responsável por promover a desaceleração do veículo, logo é considerado o principal sistema de segurança e seu acionamento se dá quando pisamos no pedal de freio. No projeto, um sistema de segurança composto de um interruptor é requerido para que o veículo venha a se desligar em caso de falhas no sistema hidráulico dos freios.",
-    imagem: "/subsistemas/freios.jpg",
+    nome: "Diretoria Técnica",
+    imagem: "/subsistemas/subsistemas2/diretoria-tecnica.jpg",
+    cargos: [
+      {
+        titulo: "Diretor(a) Técnico(a)",
+        descricao:
+          "Lidera a concepção técnica do veículo, define requisitos de desempenho, integra subsistemas e garante conformidade com as regras da competição.",
+      },
+      {
+        titulo: "Gerente de Chassi e Estrutura",
+        descricao:
+          "Projeta e valida o chassi e componentes estruturais, definindo materiais e critérios de inspeção.",
+      },
+      {
+        titulo: "Gerente de Suspensão e Direção",
+        descricao:
+          "Dimensiona sistemas de suspensão e direção garantindo estabilidade e dirigibilidade.",
+      },
+      {
+        titulo: "Gerente de Interface com o Piloto",
+        descricao:
+          "Projeta ergonomia, sistemas de retenção, conforto e segurança do piloto.",
+      },
+      {
+        titulo: "Gerente de Powertrain",
+        descricao:
+          "Desenvolve e integra motor, transmissão, arrefecimento e critérios de confiabilidade.",
+      },
+      {
+        titulo: "Gerente de Elétrica e Aquisição de Dados",
+        descricao:
+          "Desenha sistema elétrico, instrumentação e arquitetura de aquisição de dados.",
+      },
+      {
+        titulo: "Gerente de Aerodinâmica",
+        descricao:
+          "Projeta componentes aerodinâmicos, conduz estudos CFD e otimizações.",
+      },
+      {
+        titulo: "Gerente de Validação e Testes",
+        descricao:
+          "Planeja e executa campanhas de testes, coleta e análise de dados de performance.",
+      },
+    ],
   },
   {
-    nome: "Gestão de Pessoas",
-    descricao:
-      "Esse subsistema é responsável pelos relacionamentos internos do projeto. Desde a admissão de novos membros, passando pelo treinamento e acompanhamento até o desligamento dos integrantes. Dessa forma a gestão de pessoas tem a responsabilidade de facilitar a comunicação interna e proporcionar um ambiente de trabalho favorável dentro da equipe.",
-    imagem: "/subsistemas/gestaop.jpg",
-  },
-  {
-    nome: "Gestão de Negócios",
-    descricao:
-      "Esse subsistema do projeto tem como objetivo a criação de um “Business Logic Case” (Lógica de plano de negócio), que viabilize economicamente e estrategicamente uma indústria produtora de carros fórmula com a marca “Scuderia UFCG”.",
-    imagem: "/subsistemas/negocios.jpg",
-  },
-  {
-    nome: "Marketing",
-    descricao:
-      "É o subsistema que fica responsável pelo gerenciamento das redes sociais (Instagram, Facebook, etc), além de fornecer o material gráfico para o projeto, tanto para ser postado nas redes sociais, quanto para ser impresso quando necessário. Também busca patrocinadores, além de organizar eventos para que o público conheça melhor todo o projeto.",
-    imagem: "/subsistemas/marketing.jpg",
-  },
-  {
-    nome: "Motor",
-    descricao:
-      "Tem como função principal dar todo subsídio para fazer com que o veículo tenha a potência necessária para promover sua locomoção. Portanto, toda interface que diz respeito ao motor é trabalhada neste subsistema, como por exemplo: dimensionamento de escapamento, linha de alimentação de combustível, arrefecimento necessário para o motor, e entrada de ar necessária para a combustão.",
-    imagem: "/subsistemas/motor.webp",
-  },
-  {
-    nome: "Suspensão",
-    descricao:
-      "É responsável pelo dimensionamento dos componentes de suspensão e direção do veículo. Além disso, é responsável pela dinâmica veicular, ou seja, o comportamento do carro quando este está em movimento. Além disso, juntamente com a equipe de elétrica fazemos a validação da conformidade do projeto.",
-    imagem: "/subsistemas/suspensao.png",
-  },
-  {
-    nome: "Transmissão",
-    descricao:
-      "O sistema de transmissão, de forma abrangente, tem papel fundamental em diversas etapas de funcionamento do veículo, desde a partida do motor prosseguindo ao seu deslocamento. É o sistema responsável pelo movimento do veículo em diferentes faixas de velocidades, dirigindo a potência oriunda do motor para as rodas do carro.",
-    imagem: "/subsistemas/transmissao.jpg",
+    nome: "Diretoria de Fabricação",
+    imagem: "/subsistemas/subsistemas2/diretoria-fabricacao.jpg",
+    cargos: [
+      {
+        titulo: "Diretor(a) de Fabricação",
+        descricao:
+          "Supervisiona processos de manufatura, usinagem, soldagem e montagem.",
+      },
+      {
+        titulo: "Gerente de Qualidade e Controle",
+        descricao:
+          "Implementa processos de controle de qualidade, inspeções e relatórios.",
+      },
+      {
+        titulo: "Gerente de Logística de Oficina e Almoxarifado",
+        descricao:
+          "Organiza oficina, controla estoque, ferramentas, EPI e fluxo de materiais.",
+      },
+    ],
   },
 ];
 
@@ -107,16 +162,26 @@ export default function SubsistemasSlider() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-white p-6 rounded-lg shadow-md w-full min-h-[500px] pointer-events-auto"
+            className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-white p-6 rounded-lg shadow-md w-full min-h-[500px] max-h-[500px] pointer-events-auto"
           >
             <img
               src={ativo.imagem}
               alt={ativo.nome}
               className="w-full h-[300px] rounded-lg shadow-sm object-cover"
             />
-            <div className="text-[#224985] text-lg text-justify">
+
+            <div className="text-[#224985] text-justify">
               <h3 className="text-2xl font-bold mb-4">{ativo.nome}</h3>
-              <p>{ativo.descricao}</p>
+                <div className="space-y-4 max-h-[320px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-[#224985] scrollbar-track-gray-200">
+                  {ativo.cargos.map((cargo) => (
+                    <div key={cargo.titulo}>
+                      <h4 className="font-semibold text-lg">
+                        {cargo.titulo}
+                      </h4>
+                      <p className="text-sm">{cargo.descricao}</p>
+                    </div>
+                  ))}
+                </div>
             </div>
           </motion.div>
         </AnimatePresence>
@@ -128,6 +193,7 @@ export default function SubsistemasSlider() {
           <FaChevronRight className="text-[#224985]" />
         </button>
       </div>
+      <div className="pt-20"></div>
     </div>
   );
 }
