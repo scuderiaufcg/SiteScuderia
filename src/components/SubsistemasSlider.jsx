@@ -131,12 +131,13 @@ export default function SubsistemasSlider() {
 
   return (
     <div className="relative w-full flex flex-col items-center gap-8 group">
-      <div className="flex overflow-x-auto gap-4 pb-4 px-2 scrollbar-hide">
+      {/* Botões de seleção */}
+      <div className="flex flex-wrap justify-center gap-4 pb-4 px-2">
         {subsistemas.map((s, i) => (
           <button
             key={s.nome}
             onClick={() => goTo(i)}
-            className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold border transition ${
+            className={`flex-1 min-w-[120px] max-w-[200px] text-center px-4 py-2 rounded-full text-sm font-semibold border transition ${
               index === i
                 ? "bg-[#224985] text-white"
                 : "bg-white text-[#224985] border-[#224985]"
@@ -147,14 +148,8 @@ export default function SubsistemasSlider() {
         ))}
       </div>
 
+      {/* Card do subsistema */}
       <div className="relative w-full max-w-6xl">
-        <button
-          onClick={prev}
-          className="hidden group-hover:flex absolute -left-20 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 z-10 transition-opacity"
-        >
-          <FaChevronLeft className="text-[#224985]" />
-        </button>
-
         <AnimatePresence mode="wait">
           <motion.div
             key={ativo.nome}
@@ -162,37 +157,46 @@ export default function SubsistemasSlider() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-white p-6 rounded-lg shadow-md w-full min-h-[500px] max-h-[500px] pointer-events-auto"
+            className="grid grid-cols-1 md:grid-cols-2 items-start gap-8 bg-white p-6 rounded-lg shadow-md w-full 
+                       h-auto min-h-[500px] sm:min-h-[600px] md:min-h-[500px]"
           >
+            {/* Imagem */}
             <img
               src={ativo.imagem}
               alt={ativo.nome}
-              className="w-full h-[300px] rounded-lg shadow-sm object-cover"
+              className="w-full h-48 sm:h-72 md:h-full rounded-lg shadow-sm object-cover"
             />
 
-            <div className="text-[#224985] text-justify">
-              <h3 className="text-2xl font-bold mb-4">{ativo.nome}</h3>
-                <div className="space-y-4 max-h-[320px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-[#224985] scrollbar-track-gray-200">
-                  {ativo.cargos.map((cargo) => (
-                    <div key={cargo.titulo}>
-                      <h4 className="font-semibold text-lg">
-                        {cargo.titulo}
-                      </h4>
-                      <p className="text-sm">{cargo.descricao}</p>
-                    </div>
-                  ))}
-                </div>
+            {/* Conteúdo */}
+            <div className="text-[#224985] flex flex-col">
+              <h3
+                className="font-bold mb-2 sm:mb-4"
+                style={{ fontSize: "clamp(1.5rem, 2vw, 2.5rem)" }} // título responsivo
+              >
+                {ativo.nome}
+              </h3>
+              <div className="space-y-4">
+                {ativo.cargos.map((cargo) => (
+                  <div key={cargo.titulo}>
+                    <h4
+                      className="font-semibold"
+                      style={{ fontSize: "clamp(1.125rem, 1.5vw, 1.5rem)" }} // título cargo responsivo
+                    >
+                      {cargo.titulo}
+                    </h4>
+                    <p
+                      style={{ fontSize: "clamp(0.875rem, 1vw, 1rem)" }} // descrição responsiva
+                    >
+                      {cargo.descricao}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
-
-        <button
-          onClick={next}
-          className="hidden group-hover:flex absolute -right-20 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 z-10 transition-opacity"
-        >
-          <FaChevronRight className="text-[#224985]" />
-        </button>
       </div>
+
       <div className="pt-20"></div>
     </div>
   );

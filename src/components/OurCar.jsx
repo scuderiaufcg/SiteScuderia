@@ -98,19 +98,18 @@ export default function OurCar() {
       {/* Conteúdo lado a lado */}
       <div className="flex flex-col md:flex-row items-center md:items-start gap-16">
         {/* Imagem com animação de transição */}
-        <div className="relative w-[600px] h-[400px] overflow-hidden">
-          {carroAtual.imagens.map((img, i) => (
-            <img
-              key={i}
-              src={img}
-              alt={`Carro ${carroAtual.ano} - ${i}`}
-              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-                i === imagemIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
-            />
-          ))}
-        </div>
-
+      <div className="relative w-full max-w-[600px] aspect-[3/2] overflow-hidden mx-auto">
+        {carroAtual.imagens.map((img, i) => (
+          <img
+            key={i}
+            src={img}
+            alt={`Carro ${carroAtual.ano} - ${i}`}
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              i === imagemIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          />
+        ))}
+      </div>
         {/* Dados do carro */}
         <div className="flex-1 max-w-xl text-left">
           <div className="space-y-4 text-lg md:text-xl">
