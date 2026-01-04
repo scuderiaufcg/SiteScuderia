@@ -13,8 +13,10 @@ export default function Home() {
         id="inicio"
         className="h-screen w-full bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center text-white text-center px-4"
         style={{
-          backgroundImage:
-            "linear-gradient(to right bottom, #33319e, #214ab2, #0162c3, #0078d1, #008edd, #459de4, #66aceb, #82bbf2, #aec9f6, #cfd9f9, #eaebfb, #ffffff)",
+          backgroundImage: "url('/background.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <img
