@@ -11,7 +11,7 @@ export default function Home() {
     <main className="flex-grow bg-[#F0F0F0]">
       <section
         id="inicio"
-        className="h-screen w-full bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center text-white text-center px-4"
+        className="scroll-mt-[66px] h-screen w-full bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center text-white text-center px-4"
         style={{
           backgroundImage: "url('/SiteScuderia/background.jpeg')",
           backgroundSize: "cover",
@@ -56,7 +56,7 @@ export default function Home() {
         <br />
       </div>
 
-      <section id="projeto" className="w-full py-16  bg-[#224985]">
+      <section id="projeto" className=" scroll-mt-[66px] w-full py-16  bg-[#224985]">
         <h2 className="text-3xl font-semibold text-center mb-8 text-white">
           <div className="pt-5"></div>
           Projeto
@@ -65,18 +65,18 @@ export default function Home() {
       </section>
 
       <div className="py-8 space-y-32">
-        <section id="carro" className="scroll-mt-24 min-h-[80vh]">
+        <section id="carro" className="scroll-mt-[66px] min-h-[80vh]">
           <OurCar />
         </section>
 
-        <section id="subsistemas" className="w-full bg-[#224985] min-h-screen pt-[66px] flex flex-col items-center justify-center">
+        <section id="subsistemas" className=" scroll-mt-[66px] w-full bg-[#224985] min-h-screen pt-[66px] flex flex-col items-center justify-center">
           <div className="max-w-7xl mx-auto px-4 text-center text-white">
             <h2 className="text-4xl font-bold mb-10">Subsistemas</h2>
           </div>
           <SubsistemasSlider />
         </section>
 
-        <section id="patrocinios" className="scroll-mt-24 min-h-[80vh]">
+        <section id="patrocinios" className="scroll-mt-[66px] min-h-[80vh]">
           <h2 className="font-merri text-5xl text-center mb-8 text-black">
             Patrocinadores
           </h2>

@@ -1,24 +1,38 @@
 import { useEffect, useState, useRef } from "react";
 
-const sections = ["inicio", "sobre", "projeto", "carro", "patrocinios", "patrocinios"];
+const sections = [
+  "inicio",
+  "sobre",
+  "projeto",
+  "carro",
+  "subsistemas",
+  "patrocinios",
+];
+
+const HEADER_HEIGHT = 66;
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("inicio");
   const [scrolled, setScrolled] = useState(false);
-  const isScrollingRef = useRef(false); // controla se scroll programado está em andamento
+  const isScrollingRef = useRef(false);
 
   useEffect(() => {
-    // Observer para troca de seção ativa
     const observer = new IntersectionObserver(
       (entries) => {
-        if (isScrollingRef.current) return; // ignora updates enquanto scroll manual
+        if (isScrollingRef.current) return;
 
-        const visible = entries.find((entry) => entry.isIntersecting);
-        if (visible) setActiveSection(visible.target.id);
+        // pega a seção MAIS visível
+        const visibleSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleSection) {
+          setActiveSection(visibleSection.target.id);
+        }
       },
       {
-        rootMargin: "-30% 0px -50% 0px",
-        threshold: 0.4,
+        rootMargin: `-${HEADER_HEIGHT + 10}px 0px -30% 0px`,
+        threshold: [0.15, 0.3, 0.5, 0.75],
       }
     );
 
@@ -28,19 +42,13 @@ export default function Header() {
 
     elements.forEach((el) => observer.observe(el));
 
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    // Lida com troca de background ao scrollar
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 0);
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // define estado inicial
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -48,32 +56,42 @@ export default function Header() {
     const el = document.getElementById(id);
     if (!el) return;
 
-    isScrollingRef.current = true; // desativa observer temporariamente
+    isScrollingRef.current = true;
 
-    el.scrollIntoView({ behavior: "smooth" });
+    const y =
+      el.getBoundingClientRect().top +
+      window.pageYOffset -
+      HEADER_HEIGHT;
 
-    // Espera o scroll acabar (tempo estimado)
+    window.scrollTo({ top: y, behavior: "smooth" });
+
     setTimeout(() => {
-      setActiveSection(id); // força atualizar ativo após scroll
-      isScrollingRef.current = false; // reativa observer
-    }, 500);
+      setActiveSection(id);
+      isScrollingRef.current = false;
+    }, 700);
   };
 
   const navItem = (id, label) => {
     const isActive = activeSection === id;
-    const base = "cursor-pointer text-xl pb-1 border-b-2 transition duration-200";
 
-    // Define cores conforme scroll
-    let textColor = scrolled ? "text-gray-700 hover:text-blue-600 hover:border-blue-600" : "text-white hover:text-gray-200 hover:border-white";
-    let activeColor = scrolled ? "text-blue-600 border-blue-600" : "text-white border-white";
+    const base =
+      "cursor-pointer text-xl pb-1 border-b-2 transition-colors duration-200";
+
+    const textColor = scrolled
+      ? "text-gray-700 hover:text-blue-600 hover:border-blue-600"
+      : "text-white hover:text-gray-200 hover:border-white";
+
+    const activeColor = scrolled
+      ? "text-blue-600 border-blue-600"
+      : "text-white border-white";
 
     return (
       <span
         key={id}
         onClick={() => scrollTo(id)}
-        className={
-          `${base} ${isActive ? activeColor : `${textColor} border-transparent`}`
-        }
+        className={`${base} ${
+          isActive ? activeColor : `${textColor} border-transparent`
+        }`}
       >
         {label}
       </span>
