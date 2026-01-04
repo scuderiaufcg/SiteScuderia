@@ -4,7 +4,7 @@ import Sponsors from "../components/Sponsors";
 import OurCar from "../components/OurCar";
 import SubsistemasSlider from "../components/SubsistemasSlider";
 
-const images = ["/2015.jpg", "/2018.jpg", "/2019.jpg"];
+const images = ["/SiteScuderia/2015.jpg", "/SiteScuderia/2018.jpg", "/SiteScuderia/2019.jpg"];
 
 export default function Home() {
   return (
@@ -13,14 +13,14 @@ export default function Home() {
         id="inicio"
         className="h-screen w-full bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center text-white text-center px-4"
         style={{
-          backgroundImage: "url('/background.jpeg')",
+          backgroundImage: "url('/SiteScuderia/background.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
         <img
-          src="/logo.png"
+          src="/SiteScuderia/logo.png"
           alt="Logo"
           className="w-[100px] md:w-[400px] lg:w-[600px] mb-6"
         />

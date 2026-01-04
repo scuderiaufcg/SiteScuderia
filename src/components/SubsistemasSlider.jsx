@@ -5,7 +5,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const subsistemas = [
   {
     nome: "Coordenação Acadêmica",
-    imagem: "/subsistemas/subsistemas2/coordenacao-academica.jpg",
+    imagem: "/SiteScuderia/subsistemas/subsistemas2/coordenacao-academica.jpg",
     cargos: [
       {
         titulo: "Professor(a) Coordenador(a) do Projeto",
@@ -16,7 +16,7 @@ const subsistemas = [
   },
   {
     nome: "Liderança Operacional",
-    imagem: "/subsistemas/subsistemas2/liderança-operacional.jpg",
+    imagem: "/SiteScuderia/subsistemas/subsistemas2/liderança-operacional.jpg",
     cargos: [
       {
         titulo: "Capitão(ã) do Projeto",
@@ -27,7 +27,7 @@ const subsistemas = [
   },
   {
     nome: "Diretoria Administrativa",
-    imagem: "/subsistemas/subsistemas2/diretoria-administrativa.jpg",
+    imagem: "/SiteScuderia/subsistemas/subsistemas2/diretoria-administrativa.jpg",
     cargos: [
       {
         titulo: "Diretor(a) Administrativo(a)",
@@ -53,7 +53,7 @@ const subsistemas = [
   },
   {
     nome: "Diretoria Técnica",
-    imagem: "/subsistemas/subsistemas2/diretoria-tecnica.jpg",
+    imagem: "/SiteScuderia/subsistemas/subsistemas2/diretoria-tecnica.jpg",
     cargos: [
       {
         titulo: "Diretor(a) Técnico(a)",
@@ -99,7 +99,7 @@ const subsistemas = [
   },
   {
     nome: "Diretoria de Fabricação",
-    imagem: "/subsistemas/subsistemas2/diretoria-fabricacao.jpg",
+    imagem: "/SiteScuderia/subsistemas/subsistemas2/diretoria-fabricacao.jpg",
     cargos: [
       {
         titulo: "Diretor(a) de Fabricação",
