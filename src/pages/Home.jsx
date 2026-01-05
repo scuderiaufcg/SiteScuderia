@@ -72,13 +72,17 @@ export default function Home() {
           <OurCar />
         </section>
 
-        <section id="subsistemas" className=" w-full bg-[#224985] min-h-screen flex flex-col items-center justify-center">
+        <section
+          id="subsistemas"
+          className="w-full bg-[#224985] min-h-[80vh] flex flex-col items-center justify-start pt-12"
+        >
           <div className="max-w-7xl mx-auto px-4 text-center text-white">
-            <h2 className="text-4xl font-bold mb-10">Subsistemas</h2>
+            <h2 className="text-4xl font-bold mb-10 mt-8">Subsistemas</h2>
             <div className="pt-5"></div>
           </div>
           <SubsistemasSlider />
         </section>
+
 
         <section id="patrocinios" className="scroll-mt-[66px] min-h-[80vh]">
           <h2 className="font-merri text-5xl text-center mb-8 text-black">
