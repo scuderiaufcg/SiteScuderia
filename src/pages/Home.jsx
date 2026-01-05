@@ -13,14 +13,14 @@ export default function Home() {
         id="inicio"
         className="scroll-mt-[66px] h-screen w-full bg-center bg-no-repeat bg-cover flex flex-col items-center justify-center text-white text-center px-4"
         style={{
-          backgroundImage: "url('/SiteScuderia/background.jpeg')",
+          backgroundImage: "url('/background.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
         <img
-          src="/SiteScuderia/logo.png"
+          src="/logo.png"
           alt="Logo"
           className="w-[95%] md:w-[400px] lg:w-[600px] mb-6"
         />
