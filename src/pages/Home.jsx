@@ -4,7 +4,7 @@ import Sponsors from "../components/Sponsors";
 import OurCar from "../components/OurCar";
 import SubsistemasSlider from "../components/SubsistemasSlider";
 
-const images = ["/SiteScuderia/2015.jpg", "/SiteScuderia/2018.jpg", "/SiteScuderia/2019.jpg"];
+const images = ["/2015.jpg", "/2018.jpg", "/2019.jpg"];
 
 export default function Home() {
   return (
