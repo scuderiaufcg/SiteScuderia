@@ -151,44 +151,52 @@ export default function SubsistemasSlider() {
       {/* Card do subsistema */}
       <div className="relative w-full max-w-6xl">
         <AnimatePresence mode="wait">
-  <motion.div
-    key={ativo.nome}
-    initial={{ opacity: 0, x: 50 }}
-    animate={{ opacity: 1, x: 0 }}
-    exit={{ opacity: 0, x: -50 }}
-    transition={{ duration: 0.4 }}
-    className="grid grid-cols-1 md:grid-cols-2 items-start gap-8 bg-white p-6 rounded-lg shadow-md w-full 
-               h-[520px] sm:h-[640px] md:h-[520px] overflow-hidden"
-  >
-    {/* Imagem (garantir ocupa 100% da coluna) */}
-    <div className="w-full h-full">
-      <img
-        src={ativo.imagem}
-        alt={ativo.nome}
-        className="w-full h-full rounded-lg shadow-sm object-cover"
-      />
-    </div>
+          <motion.div
+            key={ativo.nome}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.4 }}
+            className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-8 bg-white p-6 rounded-lg shadow-md w-full 
+                      h-[520px] sm:h-[640px] md:h-[520px] overflow-hidden"
+          >
+            {/* Imagem: ocupa 100% da altura da coluna */}
+            <div className="w-full h-full flex-shrink-0">
+              <img
+                src={ativo.imagem}
+                alt={ativo.nome}
+                className="w-full h-full rounded-lg shadow-sm object-cover"
+              />
+            </div>
 
-    {/* Conteúdo: rolável se exceder */}
-    <div className="text-[#224985] flex flex-col overflow-y-auto pr-2">
-      <h3 className="font-bold mb-2 sm:mb-4" style={{ fontSize: "clamp(1.5rem, 2vw, 2.5rem)" }}>
-        {ativo.nome}
-      </h3>
-      <div className="space-y-4 pr-2">
-        {ativo.cargos.map((cargo) => (
-          <div key={cargo.titulo}>
-            <h4 className="font-semibold" style={{ fontSize: "clamp(1.125rem, 1.5vw, 1.5rem)" }}>
-              {cargo.titulo}
-            </h4>
-            <p style={{ fontSize: "clamp(0.875rem, 1vw, 1rem)" }}>
-              {cargo.descricao}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </motion.div>
-</AnimatePresence>
+            {/* Conteúdo: ocupa a altura total e fica rolável internamente se exceder */}
+            <div className="text-[#224985] flex flex-col h-full overflow-y-auto pr-4">
+              <h3
+                className="font-bold mb-2 sm:mb-4"
+                style={{ fontSize: "clamp(1.5rem, 2vw, 2.5rem)" }}
+              >
+                {ativo.nome}
+              </h3>
+
+              <div className="space-y-4 pb-4">
+                {ativo.cargos.map((cargo) => (
+                  <div key={cargo.titulo}>
+                    <h4
+                      className="font-semibold"
+                      style={{ fontSize: "clamp(1.125rem, 1.5vw, 1.5rem)" }}
+                    >
+                      {cargo.titulo}
+                    </h4>
+                    <p style={{ fontSize: "clamp(0.875rem, 1vw, 1rem)" }}>
+                      {cargo.descricao}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
       </div>
 
       <div className="pt-20"></div>
