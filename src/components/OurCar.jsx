@@ -49,6 +49,23 @@ const historicoCarros = [
       { label: "Torque Máximo", valor: "5,95 kgf.m" },
     ],
   },
+    {
+    ano: 2025,
+    imagens: ["/2025/1.jpg", "/2025/2.jpg"],
+    texto:
+      "Em 2025, retornamos às competições da Fórmula SAE Brasil utilizando as mesmas especificações do veículo de 2019. Esse retorno marcou a retomada da equipe ao cenário competitivo, consolidando o projeto e reafirmando a confiabilidade do conjunto mecânico desenvolvido anteriormente.",
+    dados: [
+      { label: "Entre eixos", valor: "1550 mm" },
+      { label: "Massa (Total)", valor: "287 kg" },
+      { label: "Altura do centro de gravidade", valor: "255 mm" },
+      { label: "Material do Chassi", valor: "Aço 1020" },
+      { label: "Drivetrain", valor: "RWD" },
+      { label: "Motor", valor: "Yamaha XT 660R" },
+      { label: "Potência Máxima", valor: "48 cv" },
+      { label: "Torque Máximo", valor: "5,95 kgf.m" },
+    ],
+  },
+
 ];
 
 export default function OurCar() {

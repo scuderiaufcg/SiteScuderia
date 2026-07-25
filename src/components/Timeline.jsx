@@ -4,7 +4,7 @@ import {
   VerticalTimelineElement
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaRocket, FaHandshake, FaTrophy, FaRedo, FaTools, FaBookOpen } from 'react-icons/fa';
+import { FaRocket, FaHandshake, FaTrophy, FaRedo, FaTools, FaBookOpen, FaClock } from 'react-icons/fa';
 
 const events = [
   {
@@ -85,6 +85,18 @@ const events = [
     ),
     icon: <FaBookOpen />,
     color: '#6F42C1'
+  },
+    {
+    year: '2025',
+    title: 'O Retorno!',
+    description: (
+      <p>
+        Após 6 longos anos sem participar da Formula SAE Brasil, nossa equipe competiu 
+        em 2025 cravando um 36° lugar e absorvendo muita experiência para o próximo ano de competição.
+      </p>
+    ),
+    icon: <FaClock />,
+    color: '#413DA4'
   }
 ];
 

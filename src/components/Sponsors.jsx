@@ -55,6 +55,17 @@ export default function Sponsors() {
               <img src="/patrocinio/Patrocinadores/logo-zouil.png" alt="Nutes" className="max-w-[175px] mx-auto" />
             </a>
           </div>
+           <div className="w-full sm:w-1/2 md:w-auto p-2">
+            <a href="http://nutes.uepb.edu.br/" target="_blank" rel="noopener noreferrer">
+              <img src="/patrocinio/Patrocinadores/logo-gauss.png" alt="gauss" className="max-w-[175px] mx-auto" />
+            </a>
+          </div>
+           <div className="w-full sm:w-1/2 md:w-auto p-2">
+            <a href="http://nutes.uepb.edu.br/" target="_blank" rel="noopener noreferrer">
+              <img src="/patrocinio/Patrocinadores/logo-tmac.png" alt="tmac" className="max-w-[175px] mx-auto" />
+            </a>
+          </div>
+          
         </div>
 
         {/* Prata */}
